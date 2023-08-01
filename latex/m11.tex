@@ -1,0 +1,400 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{m11}
+\MACHINE{m11}{m10}{c0}{\\This machine adds time constraints to requests and approval}
+\VARIABLES{
+	\Variable{CA}{}
+	\Variable{PCA}{}
+	\Variable{root}{}
+	\Variable{OU}{}
+	\Variable{RiO}{}
+	\Variable{UH}{}
+	\Variable{PRA}{}
+	\Variable{EA}{}
+	\Variable{ViO}{}
+	\Variable{AiO}{}
+	\Variable{UR}{}
+	\Variable{PAA}{}
+	\Variable{PVA}{}
+	\Variable{CiO}{}
+	\Variable{PCxA}{}
+	\Variable{RV}{}
+	\Variable{AV}{}
+	\Variable{AA}{}
+	\Variable{root1}{}
+	\Variable{UH1}{}
+	\Variable{OU1}{}
+	\Variable{UR1}{}
+	\Variable{RiO1}{}
+	\Variable{EA1}{}
+	\Variable{CA1}{}
+	\Variable{PRA1}{}
+	\Variable{PAA1}{}
+	\Variable{PVA1}{}
+	\Variable{PCA1}{}
+	\Variable{PCxA1}{}
+	\Variable{ViO1}{}
+	\Variable{RV1}{}
+	\Variable{AiO1}{}
+	\Variable{AA1}{}
+	\Variable{AV1}{}
+	\Variable{CiO1}{}
+	\Variable{Access\_Requested}{}
+	\Variable{Request\_Treated}{}
+	\Variable{time}{}
+	\Variable{at}{}
+	\Variable{PDA}{permission deadline assingment}
+	\Variable{Discarded\_Request}{}
+	\Variable{PDistA}{}
+	\Variable{PAcA}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$time \in{} \nat{}$}{}
+	\Invariant{inv2}{false}{$at \subseteq{} \nat{}$}{}
+	\Invariant{inv3}{false}{$at \neq{} \emptyset{} \limp{} time \leq{} min(at)$}{}
+	\Invariant{inv4}{false}{$PDA \in{} PERMISSION \pfun{} \nat{}$}{}
+	\Invariant{inv5}{false}{$Discarded\_Request \subseteq{} Access\_Requested$}{}
+}
+\EVENTS{
+\INITIALISATION{true}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$CiO \bcmeq{}  \emptyset{}$}{false}{}
+		\Action{act2}{$root \bcmin{} ORG \pfun{} UNIT$}{false}{}
+		\Action{act3}{$OU \bcmin{}  UNIT \pfun{} ORG$}{false}{}
+		\Action{act4}{$AiO \bcmeq{}  \emptyset{}$}{false}{}
+		\Action{act5}{$UH \bcmin{}  UNIT \pfun{} UNIT$}{false}{}
+		\Action{act6}{$ViO \bcmeq{}  \emptyset{}$}{false}{}
+		\Action{act7}{$RiO \bcmeq{}  \emptyset{}$}{false}{}
+		\Action{act9}{$PCA \bcmin{} PERMISSION \pfun{} COR$}{false}{}
+		\Action{act10}{$PRA \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act11}{$EA \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act12}{$UR \bcmeq{}  \emptyset{}$}{false}{}
+		\Action{act13}{$PAA \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act14}{$PVA \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act15}{$PCxA \bcmeq{}  \emptyset{}$}{false}{}
+		\Action{act16}{$AV \bcmeq{}  \emptyset{}$}{false}{}
+		\Action{act17}{$AA \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act18}{$RV \bcmeq{}  \emptyset{}$}{false}{}
+		\Action{act20}{$root1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act21}{$OU1 \bcmin{} UNIT \pfun{} ORG$}{false}{}
+		\Action{act22}{$UH1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act23}{$CA \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act24}{$UR1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act25}{$RiO1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act26}{$EA1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act27}{$CA1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act28}{$PRA1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act29}{$PAA1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act30}{$PVA1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act31}{$PCA1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act32}{$PCxA1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act33}{$ViO1 \bcmeq{} \emptyset{} $}{false}{}
+		\Action{act34}{$RV1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act35}{$AiO1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act36}{$AV1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act37}{$AA1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act38}{$CiO1 \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act39}{$Access\_Requested \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act40}{$PDistA \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act41}{$Request\_Treated \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act42}{$PAcA \bcmeq{} \emptyset{}$}{false}{}
+		\Action{act43}{$time \bcmeq{} 0 $}{true}{}
+		\Action{act44}{$at \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act45}{$PDA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act46}{$Discarded\_Request \bcmeq{} \emptyset{}$}{true}{}
+	}
+}
+\EVT{Concrete\_Model\_Generation}{true}{ordinary}{Concrete\_Model\_Generation}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$CiO \bcmeq{} CiO1$}{false}{}
+		\Action{act4}{$AiO \bcmeq{} AiO1$}{false}{}
+		\Action{act6}{$ViO \bcmeq{} ViO1$}{false}{}
+		\Action{act16}{$AV \bcmeq{} AV1$}{false}{}
+		\Action{act17}{$AA \bcmeq{} AA1$}{false}{}
+		\Action{act18}{$RV \bcmeq{} RV1$}{false}{}
+		\Action{act2}{$root \bcmeq{} root1$}{false}{}
+		\Action{act5}{$UH \bcmeq{} UH1$}{false}{}
+		\Action{act3}{$OU \bcmeq{} OU1$}{false}{}
+		\Action{act7}{$RiO \bcmeq{} RiO1$}{false}{}
+		\Action{act12}{$UR \bcmeq{} UR1$}{false}{}
+		\Action{act11}{$EA \bcmeq{} EA1$}{false}{}
+		\Action{act9}{$PCA \bcmeq{} PCA1$}{false}{}
+		\Action{act10}{$PRA \bcmeq{} PRA1$}{false}{}
+		\Action{act13}{$PAA \bcmeq{} PAA1$}{false}{}
+		\Action{act14}{$PVA \bcmeq{} PVA1$}{false}{}
+		\Action{act15}{$PCxA \bcmeq{} PCxA1$}{false}{}
+		\Action{act19}{$CA \bcmeq{} CA1$}{false}{}
+		\Action{act20}{$PAcA \bcmin{} PERMISSION \pfun{} CiO$}{false}{}
+	}
+}
+\EVT{Assign\_Oragnization\_Root}{true}{ordinary}{Assign\_Oragnization\_Root}{}{
+	\ANY{
+		\Param{u}{false}{}
+		\Param{org}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$org \in{} ORG \land{} u \in{} UNIT$}{false}{}
+		\Guard{grd2}{false}{$org \notin{} dom(root1)$}{false}{}
+		\Guard{grd3}{false}{$u \notin{} dom(UH1)$}{false}{}
+		\Guard{grd4}{false}{$ran(root1 \bunion{} \{org\mapsto{}u\}) \binter{} dom(UH1) = \emptyset{}$}{false}{}
+		\Guard{grd5}{false}{$u\mapsto{}org \in{} OU1$}{false}{}
+		\Guard{grd6}{false}{$u \notin{} ran(root1)$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$root1 \bcmeq{} root1 \bunion{} \{org\mapsto{}u\}$}{false}{}
+	}
+}
+\EVT{Add\_Unit\_Hierarchy}{true}{ordinary}{Add\_Unit\_Hierarchy}{}{
+	\ANY{
+		\Param{u1}{false}{}
+		\Param{u2}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$u1 \in{} UNIT \land{} u2 \in{} UNIT$}{false}{}
+		\Guard{grd3}{false}{$u1 \notin{} dom(UH1)$}{false}{}
+		\Guard{grd7}{false}{$u1 \mapsto{} u2 \notin{} UH1$}{false}{}
+		\Guard{grd4}{false}{$u1 \neq{} u2$}{false}{}
+		\Guard{grd5}{false}{$u2 \mapsto{} u1 \notin{} UH1$}{false}{}
+		\Guard{grd6}{false}{$u1 \notin{} ran(root1)$}{false}{}
+		\Guard{grd8}{false}{$OU1[\{u1\}] = OU1[\{u2\}]$}{false}{}
+		\Guard{grd9}{false}{$\forall{} e \qdot{} e\mapsto{}u1 \in{} EA1 \limp{} e\mapsto{}u2 \notin{} EA1$}{false}{}
+		\Guard{grd10}{false}{$\forall{} e \qdot{} e\mapsto{}u2 \in{} EA1 \limp{} e\mapsto{}u1 \notin{} EA1$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$UH1 \bcmeq{} UH1 \bunion{} \{u1 \mapsto{} u2\}$}{false}{}
+	}
+}
+\EVT{Assign\_Unit\_to\_Org}{true}{ordinary}{Assign\_Unit\_to\_Org}{}{
+	\ANY{
+		\Param{u}{false}{}
+		\Param{org}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$u \mapsto{} org \notin{} OU1 $}{false}{}
+		\Guard{grd2}{false}{$u \notin{} dom(OU1)$}{false}{}
+		\Guard{grd3}{false}{$\forall{} org1 , role \qdot{} u\mapsto{}(role\mapsto{}org1) \in{} UR1 \limp{} org = org1$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$OU1 \bcmeq{} OU1 \bunion{} \{u\mapsto{}org\}$}{false}{}
+	}
+}
+\EVT{Assign\_Role\_to\_Unit}{true}{ordinary}{Assign\_Role\_to\_Unit}{}{
+	\ANY{
+		\Param{r}{false}{}
+		\Param{u}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$r \in{} RiO1 \land{} u \in{} UNIT \land{} (u\mapsto{}r) \notin{} UR1$}{false}{}
+		\Guard{grd2}{false}{$\forall{} role, org \qdot{} r = role \mapsto{} org \limp{} (OU1[\{u\}] \neq{} \emptyset{} \limp{} OU1(u) = org)$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$UR1 \bcmeq{} UR1 \bunion{} \{(u\mapsto{}r)\}$}{false}{}
+	}
+}
+\EVT{Assign\_Role\_to\_Organization}{true}{ordinary}{Assign\_Role\_to\_Organization}{}{
+	\ANY{
+		\Param{r}{false}{}
+		\Param{org}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$r \in{} ROLE \land{} org\in{}ORG $}{false}{}
+		\Guard{grd2}{false}{$r\mapsto{}org \notin{} RiO1$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$RiO1 \bcmeq{} RiO1 \bunion{} \{r\mapsto{}org\}$}{false}{}
+	}
+}
+\EVT{Assign\_Employee−to\_Unit}{true}{ordinary}{Assign\_Employee−to\_Unit}{}{
+	\ANY{
+		\Param{e}{false}{}
+		\Param{u}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$e \mapsto{} u \notin{} EA1$}{false}{}
+		\Guard{grd2}{false}{$\forall{}u1 \qdot{} e\mapsto{}u1 \in{} EA1 \limp{} (u\mapsto{}u1 \notin{} UH1 \land{} u1 \mapsto{} u \notin{} UH1)$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$EA1 \bcmeq{} EA1 \bunion{} \{e\mapsto{}u\}$}{false}{}
+	}
+}
+\EVT{Assign\_Approver}{true}{ordinary}{Assign\_Approver}{}{
+	\ANY{
+		\Param{p}{false}{}
+		\Param{d}{false}{}
+		\Param{u}{false}{}
+		\Param{cor}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd2}{false}{$cor \mapsto{} u \mapsto{} p \mapsto{} d \notin{} CA1$}{false}{}
+		\Guard{grd5}{false}{$\forall{} u1, p1, d1 \qdot{} cor\mapsto{}u1\mapsto{}p1\mapsto{}d1 \in{} CA1 \limp{} u1 \neq{} u \land{} (u1\mapsto{}u \in{} UH1 \lor{} (\exists{}u2, p2, d2 \qdot{} cor\mapsto{}u2\mapsto{}p2\mapsto{}d2 \in{} CA1 \land{} u2\mapsto{}u \in{} UH1)) $}{false}{}
+		\Guard{grd4}{false}{$u\mapsto{}p\mapsto{}d \in{} APPROVER$}{false}{}
+		\Guard{grd3}{false}{$\forall{}u2, p2, d2\qdot{} cor\mapsto{}u2\mapsto{}p2\mapsto{}d2 \in{} CA1 \land{} u\neq{}u2 \limp{} (OU1[\{u\}] \neq{} \emptyset{} \land{} OU1[\{u2\}] \neq{} \emptyset{} \limp{} OU1(u) = OU1(u2))$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$CA1 \bcmeq{} CA1 \bunion{} \{cor\mapsto{}u\mapsto{}p\mapsto{}d\}$}{false}{}
+	}
+}
+\EVT{Define\_Security\_Rule}{false}{ordinary}{Define\_Security\_Rule}{}{
+	\ANY{
+		\Param{rio}{true}{}
+		\Param{aio}{true}{}
+		\Param{vio}{true}{}
+		\Param{cor}{true}{}
+		\Param{cio}{true}{}
+		\Param{perm}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$rio \in{} RiO1 \land{} aio \in{} AiO \land{} vio \in{} ViO \land{} cio \in{} CiO \land{} cor \in{} COR \land{} perm \in{} PERMISSION$}{true}{}
+		\Guard{grd2}{false}{$\forall{} a, v, c, org1, org2, org3 \qdot{} aio = a \mapsto{}org1 \land{} vio = v\mapsto{}org2 \land{} cio = c \mapsto{}org3 \limp{} org1 = org2 \land{} org2 = org3$}{true}{}
+		\Guard{grd3}{false}{$perm \notin{} dom(PRA1) \land{} perm \notin{} dom(PAA1) \land{} perm\notin{}dom(PVA1) \land{} perm\notin{}dom(PCA1) \land{} perm \notin{} dom(PCxA1)$}{true}{}
+		\Guard{grd4}{false}{$\forall{} r, org \qdot{} cio = r\mapsto{}org \limp{} (\forall{} u1, p1, d1, org1 \qdot{} cor\mapsto{}u1\mapsto{}p1\mapsto{}d1 \in{} CA1 \land{} OU1(u1) = org1 \limp{} org1 = org)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$PRA1 \bcmeq{} PRA1 \bunion{} \{perm \mapsto{} rio\}$}{true}{}
+		\Action{act2}{$PAA1 \bcmeq{} PAA1 \bunion{} \{perm \mapsto{} aio\} $}{true}{}
+		\Action{act3}{$PVA1 \bcmeq{} PVA1 \bunion{} \{perm \mapsto{} vio\}$}{true}{}
+		\Action{act4}{$PCA1 \bcmeq{} PCA1 \bunion{} \{perm \mapsto{} cor\}$}{true}{}
+		\Action{act5}{$PCxA1 \bcmeq{} PCxA1 \bunion{} \{perm \mapsto{} cio\}$}{true}{}
+		\Action{act6}{$PDA \bcmeq{} PDA \bunion{} \{perm\mapsto{}GLOBAL\_DEADLINE\}$}{true}{}
+	}
+}
+\EVT{Assign\_Resource\_to\_View}{true}{ordinary}{Assign\_Resource\_to\_View}{}{
+	\ANY{
+		\Param{r}{false}{}
+		\Param{vio}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$r\in{}RESOURCE \land{} vio\in{}ViO1$}{false}{}
+		\Guard{grd2}{false}{$r\mapsto{}vio \notin{} RV1$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$RV1 \bcmeq{} RV1 \bunion{} \{r\mapsto{}vio\}$}{false}{}
+	}
+}
+\EVT{Assign\_View\_to\_Organization}{true}{ordinary}{Assign\_View\_to\_Organization}{}{
+	\ANY{
+		\Param{v}{false}{}
+		\Param{org}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$v\in{} VIEW \land{} org\in{}ORG$}{false}{}
+		\Guard{grd2}{false}{$v\mapsto{}org \notin{} ViO1$}{false}{}
+		\Guard{grd3}{false}{$v\mapsto{}org \notin{} ran(RV1)$}{false}{}
+		\Guard{grd4}{false}{$v\mapsto{}org \notin{} ran(AV1)$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$ViO1 \bcmeq{} ViO1 \bunion{} \{v\mapsto{}org\}$}{false}{}
+	}
+}
+\EVT{Assign\_activity\_to\_Organization}{true}{ordinary}{Assign\_activity\_to\_Organization}{}{
+	\ANY{
+		\Param{a}{false}{}
+		\Param{org}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$a \in{}ACTIVITY \land{} org \in{} ORG$}{false}{}
+		\Guard{grd2}{false}{$a\mapsto{}org \notin{} AiO1$}{false}{}
+		\Guard{grd3}{false}{$a\mapsto{}org \notin{} ran(AA1)$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$AiO1 \bcmeq{} AiO1 \bunion{} \{a\mapsto{}org\}$}{false}{}
+	}
+}
+\EVT{Assign\_Action\_to\_Activity}{true}{ordinary}{Assign\_Action\_to\_Activity}{}{
+	\ANY{
+		\Param{a}{false}{}
+		\Param{aio}{false}{}
+		\Param{vio}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$a \in{} ACTION \land{} aio \in{} AiO1 \land{} vio \in{} ViO1$}{false}{}
+		\Guard{grd2}{false}{$a\mapsto{}aio \notin{} AA1 \land{} a\mapsto{}vio \notin{} AV1$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$AA1 \bcmeq{} AA1 \bunion{} \{a\mapsto{}aio\}$}{false}{}
+		\Action{act2}{$AV1 \bcmeq{} AV1 \bunion{} \{a\mapsto{}vio\}$}{false}{}
+	}
+}
+\EVT{Assign\_Context\_to\_Organization}{true}{ordinary}{Assign\_Context\_to\_Organization}{}{
+	\ANY{
+		\Param{org}{false}{}
+		\Param{c}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$org \in{} ORG \land{} c \in{} CONTEXT$}{false}{}
+		\Guard{grd2}{false}{$c\mapsto{}org \notin{} CiO1$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$CiO1 \bcmeq{} CiO1 \bunion{} \{c\mapsto{}org\}$}{false}{}
+	}
+}
+\EVT{Request\_Access}{false}{ordinary}{Request\_Access}{}{
+	\ANY{
+		\Param{e}{true}{}
+		\Param{a}{true}{}
+		\Param{o}{true}{}
+		\Param{t}{true}{}
+		\Param{dist}{true}{}
+		\Param{ac}{true}{}
+		\Param{d}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$e\in{}EMPLOYEE \land{} a \in{} ACTION \land{} o \in{} RESOURCE \land{} t\in{}\natn{}$}{true}{}
+		\Guard{grd3}{false}{$dist \in{} ran(PDistA)$}{true}{}
+		\Guard{grd8}{false}{$ac \in{} CONTEXT$}{true}{}
+		\Guard{grd4}{false}{$\forall{} e1, a1, o1, t1, dl, d1, ctx \qdot{} t1\mapsto{}e1\mapsto{}a1\mapsto{}o1\mapsto{}dl\mapsto{}d1\mapsto{}ctx \in{} Access\_Requested \limp{} t > t1$}{true}{}
+		\Guard{grd2}{false}{$\exists{}u, r, v, p, org, act, c, rio, aio, vio, cio, acio \qdot{} e\mapsto{}u \in{} EA \land{} u\mapsto{}org\in{} OU \land{} rio = (r\mapsto{}org) \land{} rio \in{} RiO \land{} u\mapsto{}rio \in{} UR \land{} p\mapsto{}rio \in{} PRA \land{} vio = (v\mapsto{}org) \land{} vio \in{} ViO \land{} o\mapsto{}vio \in{} RV \land{} (p\mapsto{}vio) \in{} PVA \land{} aio = (act\mapsto{}org) \land{} (p\mapsto{}aio)\in{} PAA \land{} a\mapsto{}vio \in{} AV \land{} (a\mapsto{}aio) \in{} AA \land{} cio = (c\mapsto{}org) \land{} (p\mapsto{}cio) \in{} PCxA \land{} (p\mapsto{}dist)\in{}PDistA \land{} acio =(ac\mapsto{}org) \land{} (p\mapsto{}acio) \in{} PAcA \land{} (p\mapsto{}d) \in{} PDA$}{true}{}
+		\Guard{grd6}{false}{$d\in{}\nat{}$}{true}{}
+		\Guard{grd7}{false}{$dist \in{} ran(PDistA)$}{true}{}
+		\Guard{grd5}{false}{$t > time$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$Access\_Requested \bcmeq{} Access\_Requested \bunion{} \{t\mapsto{}e\mapsto{}a\mapsto{}o\mapsto{}d\mapsto{}dist\mapsto{}ac\} $}{true}{}
+		\Action{act2}{$at \bcmeq{} at \bunion{} \{t\}$}{true}{}
+	}
+}
+\EVT{Treat\_Request}{false}{ordinary}{Treat\_Request}{}{
+	\ANY{
+		\Param{r}{true}{}
+		\Param{s}{true}{}
+		\Param{t}{true}{}
+		\Param{dec}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$r \in{} Access\_Requested \land{} t \in{} \natn{}  $}{true}{}
+		\Guard{grd5}{false}{$dec \in{} 0\upto{}1$}{true}{}
+		\Guard{grd3}{false}{$\forall{}t1, dec1, s1 \qdot{} t1\mapsto{}r\mapsto{}s1\mapsto{}dec1 \in{} Request\_Treated \limp{} t > t1 \land{} s1 \neq{} s$}{true}{\\approve once per approver}
+		\Guard{grd4}{false}{$\forall{}u, u1, t1, s1, dec1 \qdot{} s\mapsto{}u \in{} EA \land{} s1\mapsto{}u1 \in{} EA \land{} t1 < t \land{} t1\mapsto{}r\mapsto{}s1\mapsto{}dec1 \in{} Request\_Treated \limp{} u \neq{} u1 $}{true}{\\approve once per unit}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$Request\_Treated \bcmeq{} Request\_Treated \bunion{} \{t\mapsto{}r\mapsto{}s\mapsto{}dec\}$}{true}{}
+		\Action{act2}{$at \bcmeq{} at \setminus{} \{time\}$}{true}{}
+	}
+}
+\EVT{tick\_tock}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{tm}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$tm \in{} \nat{} \land{} tm > time \land{} (at \neq{} \emptyset{} \limp{} tm \leq{} min(at))$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$time \bcmeq{} tm$}{true}{}
+	}
+}
+\EVT{Assign\_Approval\_Deadline}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{p}{true}{}
+		\Param{d}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$p\in{} PERMISSION \land{} d \in{} \nat{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$PDA \bcmeq{} PDA \ovl{} \{p\mapsto{}d\}$}{true}{}
+	}
+}
+}
+\END
+\end{document}

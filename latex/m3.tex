@@ -1,0 +1,210 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{m3}
+\MACHINE{m3}{m2}{c0}{\\Assign employee to unit}
+\VARIABLES{
+	\Variable{CA}{}
+	\Variable{PCA}{}
+	\Variable{root}{}
+	\Variable{OU}{}
+	\Variable{RiO}{}
+	\Variable{UH}{}
+	\Variable{PRA}{}
+	\Variable{EA}{}
+	\Variable{ViO}{}
+	\Variable{AiO}{}
+	\Variable{UR}{}
+	\Variable{PAA}{}
+	\Variable{PVA}{}
+	\Variable{CiO}{}
+	\Variable{PCxA}{}
+	\Variable{RV}{}
+	\Variable{AV}{}
+	\Variable{AA}{}
+	\Variable{root1}{}
+	\Variable{UH1}{}
+	\Variable{OU1}{}
+	\Variable{UR1}{}
+	\Variable{RiO1}{}
+	\Variable{EA1}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$EA1 \subseteq{} EMPLOYEE \cprod{} UNIT$}{}
+	\Invariant{inv2}{false}{$\forall{} u1, u2, e \qdot{} u1\mapsto{}u2 \in{} UH1  \land{} e\mapsto{}u1 \in{} EA1 \limp{} e\mapsto{}u2 \notin{} EA1 $}{\\Employee cannot be his own supervisor}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$CiO \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act2}{$root \bcmin{} ORG \pfun{} UNIT$}{true}{}
+		\Action{act3}{$OU \bcmin{}  UNIT \pfun{} ORG$}{true}{}
+		\Action{act4}{$AiO \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act5}{$UH \bcmin{}  UNIT \pfun{} UNIT$}{true}{}
+		\Action{act6}{$ViO \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act7}{$RiO \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act9}{$PCA \bcmin{} PERMISSION \pfun{} COR$}{true}{}
+		\Action{act10}{$PRA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act11}{$EA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act12}{$UR \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act13}{$PAA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act14}{$PVA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act15}{$PCxA \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act16}{$AV \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act17}{$AA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act18}{$RV \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act20}{$root1 \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act21}{$OU1 \bcmin{} UNIT \pfun{} ORG$}{true}{}
+		\Action{act22}{$UH1 \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act23}{$CA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act24}{$UR1 \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act25}{$RiO1 \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act26}{$EA1 \bcmeq{} \emptyset{}$}{true}{}
+	}
+}
+\EVT{Abstract\_Model\_Generation}{false}{ordinary}{Abstract\_Model\_Generation}{}{
+	\ANY{
+		\Param{aio}{true}{}
+		\Param{vio}{true}{}
+		\Param{cio}{true}{}
+		\Param{aa}{true}{}
+		\Param{av}{true}{}
+		\Param{rv}{true}{}
+		\Param{pra}{true}{}
+		\Param{paa}{true}{}
+		\Param{pva}{true}{}
+		\Param{pca}{true}{}
+		\Param{pcxa}{true}{}
+		\Param{ca}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd4}{false}{$aio \in{} \pow{}(ACTIVITY \cprod{} ORG)$}{true}{}
+		\Guard{grd5}{false}{$vio \subseteq{} VIEW \cprod{} ORG$}{true}{}
+		\Guard{grd6}{false}{$cio \subseteq{} CONTEXT \cprod{} ORG$}{true}{}
+		\Guard{grd13}{false}{$av \subseteq{} ACTION \cprod{} vio$}{true}{}
+		\Guard{grd14}{false}{$aa \subseteq{} ACTION \cprod{} aio$}{true}{}
+		\Guard{grd15}{false}{$rv \subseteq{} RESOURCE \cprod{} vio$}{true}{}
+		\Guard{grd17}{false}{$pra \in{} PERMISSION \pfun{} RiO1$}{true}{}
+		\Guard{grd18}{false}{$paa \in{} PERMISSION \pfun{} aio$}{true}{}
+		\Guard{grd19}{false}{$pva \in{} PERMISSION \pfun{} vio$}{true}{}
+		\Guard{grd20}{false}{$pcxa \in{} PERMISSION \pfun{} cio$}{true}{}
+		\Guard{grd21}{false}{$pca \in{} PERMISSION \pfun{} COR$}{true}{}
+		\Guard{grd16}{false}{$ca \subseteq{} COR \cprod{} UNIT \cprod{} POSITION \cprod{} DEADLINE$}{true}{}
+	}
+	\WITNESSES{
+		\Witness{ea}{$ea = EA1$}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$CiO \bcmeq{} cio$}{true}{}
+		\Action{act4}{$AiO \bcmeq{} aio$}{true}{}
+		\Action{act6}{$ViO \bcmeq{} vio$}{true}{}
+		\Action{act9}{$PCA \bcmeq{} pca$}{true}{}
+		\Action{act10}{$PRA \bcmeq{} pra$}{true}{}
+		\Action{act13}{$PAA \bcmeq{} paa$}{true}{}
+		\Action{act14}{$PVA \bcmeq{} pva$}{true}{}
+		\Action{act15}{$PCxA \bcmeq{} pcxa$}{true}{}
+		\Action{act16}{$AV \bcmeq{} av$}{true}{}
+		\Action{act17}{$AA \bcmeq{} aa$}{true}{}
+		\Action{act18}{$RV \bcmeq{} rv$}{true}{}
+		\Action{act2}{$root \bcmeq{} root1$}{true}{}
+		\Action{act5}{$UH \bcmeq{} UH1$}{true}{}
+		\Action{act8}{$CA \bcmeq{} ca$}{true}{}
+		\Action{act3}{$OU \bcmeq{} OU1$}{true}{}
+		\Action{act7}{$RiO \bcmeq{} RiO1$}{true}{}
+		\Action{act12}{$UR \bcmeq{} UR1$}{true}{}
+		\Action{act11}{$EA \bcmeq{} EA1$}{true}{}
+	}
+}
+\EVT{Assign\_Oragnization\_Root}{true}{ordinary}{Assign\_Oragnization\_Root}{}{
+	\ANY{
+		\Param{u}{false}{}
+		\Param{org}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$org \in{} ORG \land{} u \in{} UNIT$}{false}{}
+		\Guard{grd2}{false}{$org \notin{} dom(root1)$}{false}{}
+		\Guard{grd3}{false}{$u \notin{} dom(UH1)$}{false}{}
+		\Guard{grd4}{false}{$ran(root1 \bunion{} \{org\mapsto{}u\}) \binter{} dom(UH1) = \emptyset{}$}{false}{}
+		\Guard{grd5}{false}{$u\mapsto{}org \in{} OU1$}{false}{}
+		\Guard{grd6}{false}{$u \notin{} ran(root1)$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$root1 \bcmeq{} root1 \bunion{} \{org\mapsto{}u\}$}{false}{}
+	}
+}
+\EVT{Add\_Unit\_Hierarchy}{false}{ordinary}{Add\_Unit\_Hierarchy}{}{
+	\ANY{
+		\Param{u1}{true}{}
+		\Param{u2}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$u1 \in{} UNIT \land{} u2 \in{} UNIT$}{true}{}
+		\Guard{grd3}{false}{$u1 \notin{} dom(UH1)$}{true}{}
+		\Guard{grd7}{false}{$u1 \mapsto{} u2 \notin{} UH1$}{true}{}
+		\Guard{grd4}{false}{$u1 \neq{} u2$}{true}{}
+		\Guard{grd5}{false}{$u2 \mapsto{} u1 \notin{} UH1$}{true}{}
+		\Guard{grd6}{false}{$u1 \notin{} ran(root1)$}{true}{}
+		\Guard{grd8}{false}{$OU1[\{u1\}] = OU1[\{u2\}]$}{true}{}
+		\Guard{grd9}{false}{$\forall{} e \qdot{} e\mapsto{}u1 \in{} EA1 \limp{} e\mapsto{}u2 \notin{} EA1$}{true}{}
+		\Guard{grd10}{false}{$\forall{} e \qdot{} e\mapsto{}u2 \in{} EA1 \limp{} e\mapsto{}u1 \notin{} EA1$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$UH1 \bcmeq{} UH1 \bunion{} \{u1 \mapsto{} u2\}$}{true}{}
+	}
+}
+\EVT{Assign\_Unit\_to\_Org}{true}{ordinary}{Assign\_Unit\_to\_Org}{}{
+	\ANY{
+		\Param{u}{false}{}
+		\Param{org}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$u \mapsto{} org \notin{} OU1 $}{false}{}
+		\Guard{grd2}{false}{$u \notin{} dom(OU1)$}{false}{}
+		\Guard{grd3}{false}{$\forall{} org1 , role \qdot{} u\mapsto{}(role\mapsto{}org1) \in{} UR1 \limp{} org = org1$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$OU1 \bcmeq{} OU1 \bunion{} \{u\mapsto{}org\}$}{false}{}
+	}
+}
+\EVT{Assign\_Role\_to\_Unit}{true}{ordinary}{Assign\_Role\_to\_Unit}{}{
+	\ANY{
+		\Param{r}{false}{}
+		\Param{u}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$r \in{} RiO1 \land{} u \in{} UNIT \land{} (u\mapsto{}r) \notin{} UR1$}{false}{}
+		\Guard{grd2}{false}{$\forall{} role, org \qdot{} r = role \mapsto{} org \limp{} (OU1[\{u\}] \neq{} \emptyset{} \limp{} OU1(u) = org)$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$UR1 \bcmeq{} UR1 \bunion{} \{(u\mapsto{}r)\}$}{false}{}
+	}
+}
+\EVT{Assign\_Role\_to\_Organization}{true}{ordinary}{Assign\_Role\_to\_Organization}{}{
+	\ANY{
+		\Param{r}{false}{}
+		\Param{org}{false}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$r \in{} ROLE \land{} org\in{}ORG $}{false}{}
+		\Guard{grd2}{false}{$r\mapsto{}org \notin{} RiO1$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$RiO1 \bcmeq{} RiO1 \bunion{} \{r\mapsto{}org\}$}{false}{}
+	}
+}
+\EVT{Assign\_Employee−to\_Unit}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{e}{true}{}
+		\Param{u}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$e \mapsto{} u \notin{} EA1$}{true}{}
+		\Guard{grd2}{false}{$\forall{}u1 \qdot{} e\mapsto{}u1 \in{} EA1 \limp{} (u\mapsto{}u1 \notin{} UH1 \land{} u1 \mapsto{} u \notin{} UH1)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$EA1 \bcmeq{} EA1 \bunion{} \{e\mapsto{}u\}$}{true}{}
+	}
+}
+}
+\END
+\end{document}

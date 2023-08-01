@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="6">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="ROLE" org.eventb.core.type="ℙ(ROLE)"/>
+        <org.eventb.core.poIdentifier name="ACTION" org.eventb.core.type="ℙ(ACTION)"/>
+        <org.eventb.core.poIdentifier name="ACTIVITY" org.eventb.core.type="ℙ(ACTIVITY)"/>
+        <org.eventb.core.poIdentifier name="UNIT" org.eventb.core.type="ℙ(UNIT)"/>
+        <org.eventb.core.poIdentifier name="CONTEXT" org.eventb.core.type="ℙ(CONTEXT)"/>
+        <org.eventb.core.poIdentifier name="VIEW" org.eventb.core.type="ℙ(VIEW)"/>
+        <org.eventb.core.poIdentifier name="ORG" org.eventb.core.type="ℙ(ORG)"/>
+        <org.eventb.core.poIdentifier name="EMPLOYEE" org.eventb.core.type="ℙ(EMPLOYEE)"/>
+        <org.eventb.core.poIdentifier name="COR" org.eventb.core.type="ℙ(COR)"/>
+        <org.eventb.core.poIdentifier name="RESOURCE" org.eventb.core.type="ℙ(RESOURCE)"/>
+        <org.eventb.core.poIdentifier name="PERMISSION" org.eventb.core.type="ℙ(PERMISSION)"/>
+        <org.eventb.core.poIdentifier name="isTrue" org.eventb.core.type="ℙ(CONTEXT×ℤ)"/>
+        <org.eventb.core.poIdentifier name="POSITION" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="APPROVER" org.eventb.core.type="ℙ(UNIT×ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="GLOBAL_DEADLINE" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="DEADLINE" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poPredicate name="GLOBAL_DEADLINF" org.eventb.core.predicate="finite(UNIT)∧finite(ORG)∧finite(ROLE)∧finite(EMPLOYEE)∧finite(CONTEXT)" org.eventb.core.source="/Test/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_p2XGIhy0Ee61L_Ef0FP_Qx"/>
+        <org.eventb.core.poPredicate name="GLOBAL_DEADLING" org.eventb.core.predicate="finite(PERMISSION)" org.eventb.core.source="/Test/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_p2XGIhy0Ee61L_Ef0FP_Qy"/>
+        <org.eventb.core.poPredicate name="GLOBAL_DEADLINH" org.eventb.core.predicate="finite(ACTIVITY)∧finite(ACTION)∧finite(VIEW)∧finite(RESOURCE)" org.eventb.core.source="/Test/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_p2XGIhy0Ee61L_Ef0FP_Qz"/>
+        <org.eventb.core.poPredicate name="GLOBAL_DEADLINI" org.eventb.core.predicate="finite(COR)" org.eventb.core.source="/Test/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_p2XGIhy0Ee61L_Ef0FP_Q\|"/>
+        <org.eventb.core.poPredicate name="GLOBAL_DEADLINJ" org.eventb.core.predicate="GLOBAL_DEADLINE∈ℕ1" org.eventb.core.source="/Test/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_p2XGIhy0Ee61L_Ef0FP_Q~"/>
+        <org.eventb.core.poPredicate name="GLOBAL_DEADLINK" org.eventb.core.predicate="POSITION=1 ‥ 100" org.eventb.core.source="/Test/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_p2XGIhy0Ee61L_Ef0FP_R*"/>
+        <org.eventb.core.poPredicate name="GLOBAL_DEADLINL" org.eventb.core.predicate="DEADLINE=ℕ" org.eventb.core.source="/Test/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_p2XGIhy0Ee61L_Ef0FP_R,"/>
+        <org.eventb.core.poPredicate name="GLOBAL_DEADLINM" org.eventb.core.predicate="APPROVER=UNIT × POSITION × DEADLINE" org.eventb.core.source="/Test/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_p2XGIhy0Ee61L_Ef0FP_R("/>
+        <org.eventb.core.poPredicate name="GLOBAL_DEADLINN" org.eventb.core.predicate="isTrue∈CONTEXT → 0 ‥ 1" org.eventb.core.source="/Test/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_p2XGIhy0Ee61L_Ef0FP_R."/>
+        <org.eventb.core.poPredicate name="GLOBAL_DEADLINO" org.eventb.core.predicate="card(CONTEXT)=1000" org.eventb.core.source="/Test/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_p2XGIhy0Ee61L_Ef0FP_R\/"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="AiO1" org.eventb.core.type="ℙ(ACTIVITY×ORG)"/>
+        <org.eventb.core.poIdentifier name="AA" org.eventb.core.type="ℙ(ACTION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="AV" org.eventb.core.type="ℙ(ACTION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="CA" org.eventb.core.type="ℙ(COR×UNIT×ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="CiO" org.eventb.core.type="ℙ(CONTEXT×ORG)"/>
+        <org.eventb.core.poIdentifier name="EA" org.eventb.core.type="ℙ(EMPLOYEE×UNIT)"/>
+        <org.eventb.core.poIdentifier name="PVA1" org.eventb.core.type="ℙ(PERMISSION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="ℙ(ORG×UNIT)"/>
+        <org.eventb.core.poIdentifier name="RiO" org.eventb.core.type="ℙ(ROLE×ORG)"/>
+        <org.eventb.core.poIdentifier name="CiO1" org.eventb.core.type="ℙ(CONTEXT×ORG)"/>
+        <org.eventb.core.poIdentifier name="AiO" org.eventb.core.type="ℙ(ACTIVITY×ORG)"/>
+        <org.eventb.core.poIdentifier name="UR1" org.eventb.core.type="ℙ(UNIT×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="PCA1" org.eventb.core.type="ℙ(PERMISSION×COR)"/>
+        <org.eventb.core.poIdentifier name="Access_Requested" org.eventb.core.type="ℙ(ℤ×EMPLOYEE×ACTION×RESOURCE×ℤ×ℤ×CONTEXT)"/>
+        <org.eventb.core.poIdentifier name="PRA1" org.eventb.core.type="ℙ(PERMISSION×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="PAA1" org.eventb.core.type="ℙ(PERMISSION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="OU" org.eventb.core.type="ℙ(UNIT×ORG)"/>
+        <org.eventb.core.poIdentifier name="RV" org.eventb.core.type="ℙ(RESOURCE×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="RiO1" org.eventb.core.type="ℙ(ROLE×ORG)"/>
+        <org.eventb.core.poIdentifier name="UH" org.eventb.core.type="ℙ(UNIT×UNIT)"/>
+        <org.eventb.core.poIdentifier name="UR" org.eventb.core.type="ℙ(UNIT×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="OU1" org.eventb.core.type="ℙ(UNIT×ORG)"/>
+        <org.eventb.core.poIdentifier name="EA1" org.eventb.core.type="ℙ(EMPLOYEE×UNIT)"/>
+        <org.eventb.core.poIdentifier name="PCxA1" org.eventb.core.type="ℙ(PERMISSION×(CONTEXT×ORG))"/>
+        <org.eventb.core.poIdentifier name="CA1" org.eventb.core.type="ℙ(COR×UNIT×ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="ViO1" org.eventb.core.type="ℙ(VIEW×ORG)"/>
+        <org.eventb.core.poIdentifier name="AA1" org.eventb.core.type="ℙ(ACTION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="PAA" org.eventb.core.type="ℙ(PERMISSION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="PDistA" org.eventb.core.type="ℙ(PERMISSION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="PCA" org.eventb.core.type="ℙ(PERMISSION×COR)"/>
+        <org.eventb.core.poIdentifier name="PAcA" org.eventb.core.type="ℙ(PERMISSION×(CONTEXT×ORG))"/>
+        <org.eventb.core.poIdentifier name="root1" org.eventb.core.type="ℙ(ORG×UNIT)"/>
+        <org.eventb.core.poIdentifier name="RV1" org.eventb.core.type="ℙ(RESOURCE×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="PRA" org.eventb.core.type="ℙ(PERMISSION×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="AV1" org.eventb.core.type="ℙ(ACTION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="PVA" org.eventb.core.type="ℙ(PERMISSION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="PCxA" org.eventb.core.type="ℙ(PERMISSION×(CONTEXT×ORG))"/>
+        <org.eventb.core.poIdentifier name="ViO" org.eventb.core.type="ℙ(VIEW×ORG)"/>
+        <org.eventb.core.poIdentifier name="UH1" org.eventb.core.type="ℙ(UNIT×UNIT)"/>
+        <org.eventb.core.poPredicate name="Access_Requestee" org.eventb.core.predicate="CiO⊆CONTEXT × ORG" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_tdyf0xy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestef" org.eventb.core.predicate="root∈ORG ⇸ UNIT" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_tdzG4By0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requesteg" org.eventb.core.predicate="OU∈UNIT ⇸ ORG" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_tdzG4Ry0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requesteh" org.eventb.core.predicate="AiO⊆ACTIVITY × ORG" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_tdzG4hy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestei" org.eventb.core.predicate="UH∈UNIT ⇸ UNIT" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_tdzG4xy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestej" org.eventb.core.predicate="ViO⊆VIEW × ORG" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_tdzt8By0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestek" org.eventb.core.predicate="RiO⊆ROLE × ORG" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_tdzt8Ry0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestel" org.eventb.core.predicate="CA⊆COR × UNIT × POSITION × DEADLINE" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_tdzt8hy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestem" org.eventb.core.predicate="PCA∈PERMISSION ⇸ COR" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_tdzt8xy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requesten" org.eventb.core.predicate="PRA∈PERMISSION ⇸ RiO" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_tdzt9By0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requesteo" org.eventb.core.predicate="EA⊆EMPLOYEE × UNIT" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_td0VABy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestep" org.eventb.core.predicate="UR⊆UNIT × RiO" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_td0VARy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requesteq" org.eventb.core.predicate="PAA∈PERMISSION ⇸ AiO" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_td0VAhy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requester" org.eventb.core.predicate="PVA∈PERMISSION ⇸ ViO" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_td0VAxy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestes" org.eventb.core.predicate="PCxA∈PERMISSION ⇸ CiO" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_td0VBBy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestet" org.eventb.core.predicate="AV⊆ACTION × ViO" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_td08EBy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requesteu" org.eventb.core.predicate="AA⊆ACTION × AiO" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_td08ERy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestev" org.eventb.core.predicate="RV⊆RESOURCE × ViO" org.eventb.core.source="/Test/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_td08Ehy0Ee61L_Ef0FP_Qw"/>
+        <org.eventb.core.poPredicate name="Access_Requestew" org.eventb.core.predicate="UH1∈UNIT ⇸ UNIT" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_R)"/>
+        <org.eventb.core.poPredicate name="Access_Requestex" org.eventb.core.predicate="UH1∩(id ⦂ ℙ(UNIT×UNIT))=(∅ ⦂ ℙ(UNIT×UNIT))" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_R,"/>
+        <org.eventb.core.poPredicate name="Access_Requestey" org.eventb.core.predicate="UH1∩UH1∼=(∅ ⦂ ℙ(UNIT×UNIT))" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_Q}"/>
+        <org.eventb.core.poPredicate name="Access_Requestez" org.eventb.core.predicate="∀u1⦂UNIT,u2⦂UNIT,u3⦂UNIT·u1 ↦ u2∈UH1∧u1 ↦ u3∈UH1⇒u2=u3" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_Q~"/>
+        <org.eventb.core.poPredicate name="Access_Requeste{" org.eventb.core.predicate="OU1∈UNIT ⇸ ORG" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_R\/"/>
+        <org.eventb.core.poPredicate name="Access_Requeste|" org.eventb.core.predicate="root1∈ORG ⇸ dom(OU1)" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_Q\|"/>
+        <org.eventb.core.poPredicate name="Access_Requeste}" org.eventb.core.predicate="∀org1⦂ORG,org2⦂ORG,u⦂UNIT·org1 ↦ u∈root1∧org2 ↦ u∈root1⇒org1=org2" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_R3"/>
+        <org.eventb.core.poPredicate name="Access_Requeste~" org.eventb.core.predicate="ran(root1)∩dom(UH1)=(∅ ⦂ ℙ(UNIT))" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_R'"/>
+        <org.eventb.core.poPredicate name="Access_Requestf'" org.eventb.core.predicate="∀u⦂UNIT,org⦂ORG·org ↦ u∈root1⇒u ↦ org∈OU1" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_R1"/>
+        <org.eventb.core.poPredicate name="Access_Requestf(" org.eventb.core.predicate="∀us⦂UNIT,um⦂UNIT·us ↦ um∈UH1⇒(OU1[{us}]≠(∅ ⦂ ℙ(ORG))∧OU1[{um}]≠(∅ ⦂ ℙ(ORG))⇒OU1(us)=OU1(um))" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_R0"/>
+        <org.eventb.core.poPredicate name="Access_Requestf)" org.eventb.core.predicate="RiO1⊆ROLE × ORG" org.eventb.core.source="/Test/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_R:"/>
+        <org.eventb.core.poPredicate name="Access_Requestf*" org.eventb.core.predicate="UR1⊆UNIT × RiO1" org.eventb.core.source="/Test/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_R6"/>
+        <org.eventb.core.poPredicate name="Access_Requestf+" org.eventb.core.predicate="∀u⦂UNIT,org⦂ORG,role⦂ROLE·u ↦ (role ↦ org)∈UR1⇒(OU1[{u}]≠(∅ ⦂ ℙ(ORG))⇒OU1(u)=org)" org.eventb.core.source="/Test/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_R;"/>
+        <org.eventb.core.poPredicate name="Access_Requestf," org.eventb.core.predicate="EA1⊆EMPLOYEE × UNIT" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_RD"/>
+        <org.eventb.core.poPredicate name="Access_Requestf-" org.eventb.core.predicate="∀u1⦂UNIT,u2⦂UNIT,e⦂EMPLOYEE·u1 ↦ u2∈UH1∧e ↦ u1∈EA1⇒e ↦ u2∉EA1" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_RE"/>
+        <org.eventb.core.poPredicate name="Access_Requestf." org.eventb.core.predicate="CA1⊆COR × UNIT × POSITION × DEADLINE" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_RN"/>
+        <org.eventb.core.poPredicate name="Access_Requestf/" org.eventb.core.predicate="PRA1∈PERMISSION ⇸ RiO1" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_RV"/>
+        <org.eventb.core.poPredicate name="Access_Requestf0" org.eventb.core.predicate="PAA1∈PERMISSION ⇸ AiO" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_RW"/>
+        <org.eventb.core.poPredicate name="Access_Requestf1" org.eventb.core.predicate="PVA1∈PERMISSION ⇸ ViO" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_RX"/>
+        <org.eventb.core.poPredicate name="Access_Requestf2" org.eventb.core.predicate="PCA1∈PERMISSION ⇸ COR" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_RY"/>
+        <org.eventb.core.poPredicate name="Access_Requestf3" org.eventb.core.predicate="PCxA1∈PERMISSION ⇸ CiO" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_RZ"/>
+        <org.eventb.core.poPredicate name="Access_Requestf4" org.eventb.core.predicate="∀cor⦂COR,u1⦂UNIT,p1⦂ℤ,d1⦂ℤ,u2⦂UNIT,p2⦂ℤ,d2⦂ℤ·cor ↦ u1 ↦ p1 ↦ d1∈CA1∧cor ↦ u2 ↦ p2 ↦ d2∈CA1∧u1≠u2⇒(OU1[{u1}]≠(∅ ⦂ ℙ(ORG))∧OU1[{u2}]≠(∅ ⦂ ℙ(ORG))⇒OU1(u1)=OU1(u2))" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_RO"/>
+        <org.eventb.core.poPredicate name="Access_Requestf5" org.eventb.core.predicate="ViO1⊆VIEW × ORG" org.eventb.core.source="/Test/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_Rb"/>
+        <org.eventb.core.poPredicate name="Access_Requestf6" org.eventb.core.predicate="RV1⊆RESOURCE × ViO1" org.eventb.core.source="/Test/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_Re"/>
+        <org.eventb.core.poPredicate name="Access_Requestf7" org.eventb.core.predicate="AiO1⊆ACTIVITY × ORG" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_Rv"/>
+        <org.eventb.core.poPredicate name="Access_Requestf8" org.eventb.core.predicate="AV1⊆ACTION × ViO1" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_Rw"/>
+        <org.eventb.core.poPredicate name="Access_Requestf9" org.eventb.core.predicate="AA1⊆ACTION × AiO1" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_Rx"/>
+        <org.eventb.core.poPredicate name="Access_Requestf:" org.eventb.core.predicate="CiO1⊆CONTEXT × ORG" org.eventb.core.source="/Test/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_S."/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTALLHYPAccess_Requestee"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×EMPLOYEE×ACTION×RESOURCE×ℤ×ℤ×CONTEXT))⊆ℕ1 × EMPLOYEE × ACTION × RESOURCE × DEADLINE × ℕ × CONTEXT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_S@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S."/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S."/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_S@"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTALLHYPAccess_Requestee"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(PERMISSION×ℤ))∈PERMISSION ⇸ ℕ" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_SC"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S."/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S."/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_SC"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTALLHYPAccess_Requestee"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(PERMISSION×(CONTEXT×ORG)))∈PERMISSION ⇸ (∅ ⦂ ℙ(CONTEXT×ORG))" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_SE"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S."/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S."/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_SE"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requestee" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="UR1'" org.eventb.core.type="ℙ(UNIT×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="PRA1'" org.eventb.core.type="ℙ(PERMISSION×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="RV'" org.eventb.core.type="ℙ(RESOURCE×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="PAA1'" org.eventb.core.type="ℙ(PERMISSION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="OU1'" org.eventb.core.type="ℙ(UNIT×ORG)"/>
+        <org.eventb.core.poIdentifier name="OU'" org.eventb.core.type="ℙ(UNIT×ORG)"/>
+        <org.eventb.core.poIdentifier name="Access_Requested'" org.eventb.core.type="ℙ(ℤ×EMPLOYEE×ACTION×RESOURCE×ℤ×ℤ×CONTEXT)"/>
+        <org.eventb.core.poIdentifier name="PDistA'" org.eventb.core.type="ℙ(PERMISSION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="CA'" org.eventb.core.type="ℙ(COR×UNIT×ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="PVA'" org.eventb.core.type="ℙ(PERMISSION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="ViO'" org.eventb.core.type="ℙ(VIEW×ORG)"/>
+        <org.eventb.core.poIdentifier name="AiO'" org.eventb.core.type="ℙ(ACTIVITY×ORG)"/>
+        <org.eventb.core.poIdentifier name="AA1'" org.eventb.core.type="ℙ(ACTION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="PCxA1'" org.eventb.core.type="ℙ(PERMISSION×(CONTEXT×ORG))"/>
+        <org.eventb.core.poIdentifier name="PAA'" org.eventb.core.type="ℙ(PERMISSION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="RiO'" org.eventb.core.type="ℙ(ROLE×ORG)"/>
+        <org.eventb.core.poIdentifier name="UH1'" org.eventb.core.type="ℙ(UNIT×UNIT)"/>
+        <org.eventb.core.poIdentifier name="PCxA'" org.eventb.core.type="ℙ(PERMISSION×(CONTEXT×ORG))"/>
+        <org.eventb.core.poIdentifier name="UR'" org.eventb.core.type="ℙ(UNIT×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="root1'" org.eventb.core.type="ℙ(ORG×UNIT)"/>
+        <org.eventb.core.poIdentifier name="UH'" org.eventb.core.type="ℙ(UNIT×UNIT)"/>
+        <org.eventb.core.poIdentifier name="CiO1'" org.eventb.core.type="ℙ(CONTEXT×ORG)"/>
+        <org.eventb.core.poIdentifier name="CA1'" org.eventb.core.type="ℙ(COR×UNIT×ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="AV'" org.eventb.core.type="ℙ(ACTION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="PVA1'" org.eventb.core.type="ℙ(PERMISSION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="AA'" org.eventb.core.type="ℙ(ACTION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="ViO1'" org.eventb.core.type="ℙ(VIEW×ORG)"/>
+        <org.eventb.core.poIdentifier name="EA'" org.eventb.core.type="ℙ(EMPLOYEE×UNIT)"/>
+        <org.eventb.core.poIdentifier name="AV1'" org.eventb.core.type="ℙ(ACTION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="PCA'" org.eventb.core.type="ℙ(PERMISSION×COR)"/>
+        <org.eventb.core.poIdentifier name="root'" org.eventb.core.type="ℙ(ORG×UNIT)"/>
+        <org.eventb.core.poIdentifier name="RV1'" org.eventb.core.type="ℙ(RESOURCE×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="RiO1'" org.eventb.core.type="ℙ(ROLE×ORG)"/>
+        <org.eventb.core.poIdentifier name="PAcA'" org.eventb.core.type="ℙ(PERMISSION×(CONTEXT×ORG))"/>
+        <org.eventb.core.poIdentifier name="EA1'" org.eventb.core.type="ℙ(EMPLOYEE×UNIT)"/>
+        <org.eventb.core.poIdentifier name="PRA'" org.eventb.core.type="ℙ(PERMISSION×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="PCA1'" org.eventb.core.type="ℙ(PERMISSION×COR)"/>
+        <org.eventb.core.poIdentifier name="AiO1'" org.eventb.core.type="ℙ(ACTIVITY×ORG)"/>
+        <org.eventb.core.poIdentifier name="CiO'" org.eventb.core.type="ℙ(CONTEXT×ORG)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requestee" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requestee" org.eventb.core.poStamp="6"/>
+    <org.eventb.core.poSequent name="Concrete_Model_Generation/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTALLHYPAccess_Requestef">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="PAcA'∈PERMISSION ⇸ CiO" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S\/|org.eventb.core.action#("/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PAcA'∈PERMISSION ⇸ CiO1" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_SE"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S\/"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S\/"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_SE"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poSequent#Concrete_Model_Generation\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Concrete_Model_Generation/act20/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTALLHYPAccess_Requestef"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PERMISSION ⇸ CiO≠(∅ ⦂ ℙ(ℙ(PERMISSION×(CONTEXT×ORG))))" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S\/|org.eventb.core.action#("/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S\/|org.eventb.core.action#("/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTALLHYPAccess_Requestef"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requestef" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="RV'" org.eventb.core.type="ℙ(RESOURCE×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="OU'" org.eventb.core.type="ℙ(UNIT×ORG)"/>
+        <org.eventb.core.poIdentifier name="CA'" org.eventb.core.type="ℙ(COR×UNIT×ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="PVA'" org.eventb.core.type="ℙ(PERMISSION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="ViO'" org.eventb.core.type="ℙ(VIEW×ORG)"/>
+        <org.eventb.core.poIdentifier name="AiO'" org.eventb.core.type="ℙ(ACTIVITY×ORG)"/>
+        <org.eventb.core.poIdentifier name="PAA'" org.eventb.core.type="ℙ(PERMISSION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="RiO'" org.eventb.core.type="ℙ(ROLE×ORG)"/>
+        <org.eventb.core.poIdentifier name="PCxA'" org.eventb.core.type="ℙ(PERMISSION×(CONTEXT×ORG))"/>
+        <org.eventb.core.poIdentifier name="UR'" org.eventb.core.type="ℙ(UNIT×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="UH'" org.eventb.core.type="ℙ(UNIT×UNIT)"/>
+        <org.eventb.core.poIdentifier name="AV'" org.eventb.core.type="ℙ(ACTION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="AA'" org.eventb.core.type="ℙ(ACTION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="EA'" org.eventb.core.type="ℙ(EMPLOYEE×UNIT)"/>
+        <org.eventb.core.poIdentifier name="PCA'" org.eventb.core.type="ℙ(PERMISSION×COR)"/>
+        <org.eventb.core.poIdentifier name="root'" org.eventb.core.type="ℙ(ORG×UNIT)"/>
+        <org.eventb.core.poIdentifier name="PAcA'" org.eventb.core.type="ℙ(PERMISSION×(CONTEXT×ORG))"/>
+        <org.eventb.core.poIdentifier name="PRA'" org.eventb.core.type="ℙ(PERMISSION×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="CiO'" org.eventb.core.type="ℙ(CONTEXT×ORG)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requestef" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requestef" org.eventb.core.poStamp="6"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requesteg" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="u" org.eventb.core.type="UNIT"/>
+        <org.eventb.core.poIdentifier name="root1'" org.eventb.core.type="ℙ(ORG×UNIT)"/>
+        <org.eventb.core.poIdentifier name="org" org.eventb.core.type="ORG"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requesteg" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requesteg" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="org∈ORG∧u∈UNIT" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Qz|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="org∉dom(root1)" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Qz|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="u∉dom(UH1)" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Qz|org.eventb.core.guard#."/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ran(root1∪{org ↦ u})∩dom(UH1)=(∅ ⦂ ℙ(UNIT))" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Qz|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="u ↦ org∈OU1" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Qz|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="u∉ran(root1)" org.eventb.core.source="/Test/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Qz|org.eventb.core.guard#1"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requesteh" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="UH1'" org.eventb.core.type="ℙ(UNIT×UNIT)"/>
+        <org.eventb.core.poIdentifier name="u1" org.eventb.core.type="UNIT"/>
+        <org.eventb.core.poIdentifier name="u2" org.eventb.core.type="UNIT"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requesteh" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requesteh" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u1∈UNIT∧u2∈UNIT" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R&gt;|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="u1∉dom(UH1)" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R&gt;|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="u1 ↦ u2∉UH1" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R&gt;|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="u1≠u2" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R&gt;|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="u2 ↦ u1∉UH1" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R&gt;|org.eventb.core.guard#."/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="u1∉ran(root1)" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R&gt;|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="OU1[{u1}]=OU1[{u2}]" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R&gt;|org.eventb.core.guard#1"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="∀e⦂EMPLOYEE·e ↦ u1∈EA1⇒e ↦ u2∉EA1" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R&gt;|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="∀e⦂EMPLOYEE·e ↦ u2∈EA1⇒e ↦ u1∉EA1" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R&gt;|org.eventb.core.guard#3"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requestei" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="OU1'" org.eventb.core.type="ℙ(UNIT×ORG)"/>
+        <org.eventb.core.poIdentifier name="u" org.eventb.core.type="UNIT"/>
+        <org.eventb.core.poIdentifier name="org" org.eventb.core.type="ORG"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requestei" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requestei" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u ↦ org∉OU1" org.eventb.core.source="/Test/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R3|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="u∉dom(OU1)" org.eventb.core.source="/Test/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R3|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀org1⦂ORG,role⦂ROLE·u ↦ (role ↦ org1)∈UR1⇒org=org1" org.eventb.core.source="/Test/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R3|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requestej" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="UR1'" org.eventb.core.type="ℙ(UNIT×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="u" org.eventb.core.type="UNIT"/>
+        <org.eventb.core.poIdentifier name="r" org.eventb.core.type="ROLE×ORG"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requestej" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requestej" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="r∈RiO1∧u∈UNIT∧u ↦ r∉UR1" org.eventb.core.source="/Test/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R4|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀role⦂ROLE,org⦂ORG·r=role ↦ org⇒(OU1[{u}]≠(∅ ⦂ ℙ(ORG))⇒OU1(u)=org)" org.eventb.core.source="/Test/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R4|org.eventb.core.guard#."/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requestek" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="r" org.eventb.core.type="ROLE"/>
+        <org.eventb.core.poIdentifier name="RiO1'" org.eventb.core.type="ℙ(ROLE×ORG)"/>
+        <org.eventb.core.poIdentifier name="org" org.eventb.core.type="ORG"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requestek" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requestek" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="r∈ROLE∧org∈ORG" org.eventb.core.source="/Test/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R8|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r ↦ org∉RiO1" org.eventb.core.source="/Test/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R8|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requestel" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="u" org.eventb.core.type="UNIT"/>
+        <org.eventb.core.poIdentifier name="e" org.eventb.core.type="EMPLOYEE"/>
+        <org.eventb.core.poIdentifier name="EA1'" org.eventb.core.type="ℙ(EMPLOYEE×UNIT)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requestel" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requestel" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="e ↦ u∉EA1" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_RB|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀u1⦂UNIT·e ↦ u1∈EA1⇒u ↦ u1∉UH1∧u1 ↦ u∉UH1" org.eventb.core.source="/Test/m3.bum|org.eventb.core.machineFile#m3|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_RB|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requestem" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="u" org.eventb.core.type="UNIT"/>
+        <org.eventb.core.poIdentifier name="CA1'" org.eventb.core.type="ℙ(COR×UNIT×ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="d" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="cor" org.eventb.core.type="COR"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requestem" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requestem" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cor ↦ u ↦ p ↦ d∉CA1" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_RL|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀u1⦂UNIT,p1⦂ℤ,d1⦂ℤ·cor ↦ u1 ↦ p1 ↦ d1∈CA1⇒u1≠u∧(u1 ↦ u∈UH1∨(∃u2⦂UNIT,p2⦂ℤ,d2⦂ℤ·cor ↦ u2 ↦ p2 ↦ d2∈CA1∧u2 ↦ u∈UH1))" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_RL|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="u ↦ p ↦ d∈APPROVER" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_RL|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀u2⦂UNIT,p2⦂ℤ,d2⦂ℤ·cor ↦ u2 ↦ p2 ↦ d2∈CA1∧u≠u2⇒(OU1[{u}]≠(∅ ⦂ ℙ(ORG))∧OU1[{u2}]≠(∅ ⦂ ℙ(ORG))⇒OU1(u)=OU1(u2))" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_RL|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requesten" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="PRA1'" org.eventb.core.type="ℙ(PERMISSION×(ROLE×ORG))"/>
+        <org.eventb.core.poIdentifier name="cio" org.eventb.core.type="CONTEXT×ORG"/>
+        <org.eventb.core.poIdentifier name="vio" org.eventb.core.type="VIEW×ORG"/>
+        <org.eventb.core.poIdentifier name="rio" org.eventb.core.type="ROLE×ORG"/>
+        <org.eventb.core.poIdentifier name="PAA1'" org.eventb.core.type="ℙ(PERMISSION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="perm" org.eventb.core.type="PERMISSION"/>
+        <org.eventb.core.poIdentifier name="PCxA1'" org.eventb.core.type="ℙ(PERMISSION×(CONTEXT×ORG))"/>
+        <org.eventb.core.poIdentifier name="aio" org.eventb.core.type="ACTIVITY×ORG"/>
+        <org.eventb.core.poIdentifier name="PVA1'" org.eventb.core.type="ℙ(PERMISSION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="PCA1'" org.eventb.core.type="ℙ(PERMISSION×COR)"/>
+        <org.eventb.core.poIdentifier name="cor" org.eventb.core.type="COR"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requesten" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requesten" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="rio∈RiO1∧aio∈AiO∧vio∈ViO∧cio∈CiO∧cor∈COR∧perm∈PERMISSION" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_RP|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀a⦂ACTIVITY,v⦂VIEW,c⦂CONTEXT,org1⦂ORG,org2⦂ORG,org3⦂ORG·aio=a ↦ org1∧vio=v ↦ org2∧cio=c ↦ org3⇒org1=org2∧org2=org3" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_RP|org.eventb.core.guard#3"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="perm∉dom(PRA1)∧perm∉dom(PAA1)∧perm∉dom(PVA1)∧perm∉dom(PCA1)∧perm∉dom(PCxA1)" org.eventb.core.source="/Test/m4.bum|org.eventb.core.machineFile#m4|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_RP|org.eventb.core.guard#4"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requesteo" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="vio" org.eventb.core.type="VIEW×ORG"/>
+        <org.eventb.core.poIdentifier name="r" org.eventb.core.type="RESOURCE"/>
+        <org.eventb.core.poIdentifier name="RV1'" org.eventb.core.type="ℙ(RESOURCE×(VIEW×ORG))"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requesteo" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requesteo" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="r∈RESOURCE∧vio∈ViO1" org.eventb.core.source="/Test/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R`|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r ↦ vio∉RV1" org.eventb.core.source="/Test/m5.bum|org.eventb.core.machineFile#m5|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_R`|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requestep" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="v" org.eventb.core.type="VIEW"/>
+        <org.eventb.core.poIdentifier name="ViO1'" org.eventb.core.type="ℙ(VIEW×ORG)"/>
+        <org.eventb.core.poIdentifier name="org" org.eventb.core.type="ORG"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requestep" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requestep" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="v∈VIEW∧org∈ORG" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Rp|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="v ↦ org∉ViO1" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Rp|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="v ↦ org∉ran(RV1)" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Rp|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="v ↦ org∉ran(AV1)" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Rp|org.eventb.core.guard#-"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requesteq" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="ACTIVITY"/>
+        <org.eventb.core.poIdentifier name="org" org.eventb.core.type="ORG"/>
+        <org.eventb.core.poIdentifier name="AiO1'" org.eventb.core.type="ℙ(ACTIVITY×ORG)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requesteq" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requesteq" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈ACTIVITY∧org∈ORG" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Rq|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a ↦ org∉AiO1" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Rq|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="a ↦ org∉ran(AA1)" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Rq|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requester" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="vio" org.eventb.core.type="VIEW×ORG"/>
+        <org.eventb.core.poIdentifier name="AA1'" org.eventb.core.type="ℙ(ACTION×(ACTIVITY×ORG))"/>
+        <org.eventb.core.poIdentifier name="aio" org.eventb.core.type="ACTIVITY×ORG"/>
+        <org.eventb.core.poIdentifier name="AV1'" org.eventb.core.type="ℙ(ACTION×(VIEW×ORG))"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="ACTION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requester" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requester" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈ACTION∧aio∈AiO1∧vio∈ViO1" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Rr|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a ↦ aio∉AA1∧a ↦ vio∉AV1" org.eventb.core.source="/Test/m6.bum|org.eventb.core.machineFile#m6|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_Rr|org.eventb.core.guard#-"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requestes" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CONTEXT"/>
+        <org.eventb.core.poIdentifier name="CiO1'" org.eventb.core.type="ℙ(CONTEXT×ORG)"/>
+        <org.eventb.core.poIdentifier name="org" org.eventb.core.type="ORG"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requestes" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requestes" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="org∈ORG∧c∈CONTEXT" org.eventb.core.source="/Test/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S,|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c ↦ org∉CiO1" org.eventb.core.source="/Test/m7.bum|org.eventb.core.machineFile#m7|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S,|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Request_Access/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTALLHYPAccess_Requestet"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Access_Requested∪{t ↦ e ↦ a ↦ o ↦ GLOBAL_DEADLINE ↦ dist ↦ ac}⊆ℕ1 × EMPLOYEE × ACTION × RESOURCE × DEADLINE × ℕ × CONTEXT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_S@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_S@"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poSequent#Request_Access\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Request_Access/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTALLHYPAccess_Requestet"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="e∈EMPLOYEE∧a∈ACTION∧o∈RESOURCE" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poSequent#Request_Access\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Request_Access/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTALLHYPAccess_Requestet"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃u⦂UNIT,r⦂ROLE,v⦂VIEW,p⦂PERMISSION,org⦂ORG,act⦂ACTIVITY,c⦂CONTEXT,rio⦂ROLE×ORG,aio⦂ACTIVITY×ORG,vio⦂VIEW×ORG,cio⦂CONTEXT×ORG·e ↦ u∈EA1∧u ↦ org∈OU1∧rio=r ↦ org∧rio∈RiO1∧u ↦ rio∈UR1∧p ↦ rio∈PRA1∧vio=v ↦ org∧o ↦ vio∈RV1∧p ↦ vio∈PVA1∧aio=act ↦ org∧p ↦ aio∈PAA1∧a ↦ vio∈AV∧a ↦ aio∈AA1∧cio=c ↦ org∧p ↦ cio∈PCxA1" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;|org.eventb.core.guard#+"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Test/m8.bum|org.eventb.core.machineFile#m8|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;|org.eventb.core.guard#+"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poSequent#Request_Access\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requestet" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="ac" org.eventb.core.type="CONTEXT"/>
+        <org.eventb.core.poIdentifier name="Access_Requested'" org.eventb.core.type="ℙ(ℤ×EMPLOYEE×ACTION×RESOURCE×ℤ×ℤ×CONTEXT)"/>
+        <org.eventb.core.poIdentifier name="dist" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="o" org.eventb.core.type="RESOURCE"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="ACTION"/>
+        <org.eventb.core.poIdentifier name="t" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="e" org.eventb.core.type="EMPLOYEE"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requestet" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requestet" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="e∈EMPLOYEE∧a∈ACTION∧o∈RESOURCE∧t∈ℕ1" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dist∈ran(PDistA)" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ac∈CONTEXT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀e1⦂EMPLOYEE,a1⦂ACTION,o1⦂RESOURCE,t1⦂ℤ,dl⦂ℤ,d1⦂ℤ,ctx⦂CONTEXT·t1 ↦ e1 ↦ a1 ↦ o1 ↦ dl ↦ d1 ↦ ctx∈Access_Requested⇒t&gt;t1" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∃u⦂UNIT,r⦂ROLE,v⦂VIEW,p⦂PERMISSION,org⦂ORG,act⦂ACTIVITY,c⦂CONTEXT,rio⦂ROLE×ORG,aio⦂ACTIVITY×ORG,vio⦂VIEW×ORG,cio⦂CONTEXT×ORG,acio⦂CONTEXT×ORG·e ↦ u∈EA∧u ↦ org∈OU∧rio=r ↦ org∧rio∈RiO∧u ↦ rio∈UR∧p ↦ rio∈PRA∧vio=v ↦ org∧vio∈ViO∧o ↦ vio∈RV∧p ↦ vio∈PVA∧aio=act ↦ org∧p ↦ aio∈PAA∧a ↦ vio∈AV∧a ↦ aio∈AA∧cio=c ↦ org∧p ↦ cio∈PCxA∧p ↦ dist∈PDistA∧acio=ac ↦ org∧p ↦ acio∈PAcA" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_S&gt;|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Assign_approval_perimeter/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTALLHYPAccess_Requesteu"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PDistA∪{perm ↦ dist}∈PERMISSION ⇸ ℕ" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_SC"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_SA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_SC"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poSequent#Assign_approval_perimeter\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTAccess_Requesteu" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="PDistA'" org.eventb.core.type="ℙ(PERMISSION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="perm" org.eventb.core.type="PERMISSION"/>
+        <org.eventb.core.poIdentifier name="dist" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPAccess_Requesteu" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#EVTIDENTAccess_Requesteu" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="perm ↦ dist∉PDistA" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.event#_tdyf0hy0Ee61L_Ef0FP_SA|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Test/m9.bpo|org.eventb.core.poFile#m9|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Access_Requested⊆ℕ1 × EMPLOYEE × ACTION × RESOURCE × DEADLINE × ℕ × CONTEXT" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_S@"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PDistA∈PERMISSION ⇸ ℕ" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_SC"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="PAcA∈PERMISSION ⇸ CiO" org.eventb.core.source="/Test/m9.bum|org.eventb.core.machineFile#m9|org.eventb.core.invariant#_tdyf0hy0Ee61L_Ef0FP_SE"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

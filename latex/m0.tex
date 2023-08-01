@@ -1,0 +1,134 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{m0}
+\MACHINE{m0}{}{c0}{\\This machine defines the abstarct machine and generates an abstract model which will be refine further}
+\VARIABLES{
+	\Variable{UH}{}
+	\Variable{PCA}{}
+	\Variable{root}{}
+	\Variable{OU}{}
+	\Variable{RiO}{}
+	\Variable{PRA}{}
+	\Variable{EA}{}
+	\Variable{UR}{}
+	\Variable{ViO}{}
+	\Variable{AiO}{}
+	\Variable{PAA}{}
+	\Variable{PVA}{}
+	\Variable{CiO}{}
+	\Variable{PCxA}{}
+	\Variable{RV}{}
+	\Variable{AV}{}
+	\Variable{AA}{}
+	\Variable{CA}{many to many cor to approver definition}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$CiO \subseteq{} CONTEXT \cprod{} ORG$}{\\context in organization}
+	\Invariant{inv2}{false}{$root \in{} ORG \pfun{} UNIT$}{\\root of the organization}
+	\Invariant{inv3}{false}{$OU \in{} UNIT \pfun{} ORG$}{\\unit to organization mapping}
+	\Invariant{inv4}{false}{$AiO \subseteq{} ACTIVITY \cprod{} ORG$}{\\activity to organization mapping}
+	\Invariant{inv5}{false}{$UH \in{} UNIT \pfun{} UNIT$}{\\unit hierarchy: many to one unit to unit relationship}
+	\Invariant{inv6}{false}{$ViO \subseteq{} VIEW \cprod{} ORG$}{\\view to org mapping}
+	\Invariant{inv7}{false}{$RiO \subseteq{} ROLE \cprod{} ORG$}{\\role to org mapping}
+	\Invariant{inv8}{false}{$CA \subseteq{} COR \cprod{} UNIT \cprod{} POSITION \cprod{} DEADLINE$}{\\chain of command approver mapping}
+	\Invariant{inv9}{false}{$PCA \in{} PERMISSION \pfun{} COR$}{\\permission to chain of command mapping}
+	\Invariant{inv10}{false}{$PRA \in{} PERMISSION \pfun{} RiO$}{\\permission to role assigment}
+	\Invariant{inv11}{false}{$EA \subseteq{} EMPLOYEE \cprod{} UNIT$}{\\many to many employee to unit assingment}
+	\Invariant{inv12}{false}{$UR \subseteq{} UNIT \cprod{} RiO$}{\\unit to role assingment}
+	\Invariant{inv13}{false}{$PAA \in{} PERMISSION \pfun{} AiO$}{\\permission to activity mapping}
+	\Invariant{inv14}{false}{$PVA \in{} PERMISSION \pfun{} ViO$}{\\permission to view mapping}
+	\Invariant{inv15}{false}{$PCxA \in{} PERMISSION \pfun{} CiO$}{\\permission to context mapping}
+	\Invariant{inv16}{false}{$AV \subseteq{} ACTION \cprod{} ViO$}{\\action to view mapping}
+	\Invariant{inv17}{false}{$AA \subseteq{} ACTION \cprod{} AiO$}{\\action to activity mapping}
+	\Invariant{inv18}{false}{$RV \subseteq{} RESOURCE \cprod{} ViO$}{\\resource to view mapping}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$CiO \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act2}{$root \bcmin{} ORG \pfun{} UNIT$}{true}{}
+		\Action{act3}{$OU \bcmin{}  UNIT \pfun{} ORG$}{true}{}
+		\Action{act4}{$AiO \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act5}{$UH \bcmin{}  UNIT \pfun{} UNIT$}{true}{}
+		\Action{act6}{$ViO \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act7}{$RiO \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act9}{$PCA \bcmin{} PERMISSION \pfun{} COR$}{true}{}
+		\Action{act10}{$PRA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act11}{$EA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act12}{$UR \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act13}{$PAA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act14}{$PVA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act15}{$PCxA \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act16}{$AV \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act17}{$AA \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act18}{$RV \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{act19}{$CA \bcmeq{} \emptyset{}$}{true}{}
+	}
+}
+\EVT{Abstract\_Model\_Generation}{false}{ordinary}{}{\\This event generates an abstract model without constraints chsking. It will be further refined to more concrete one. }{
+	\ANY{
+		\Param{rio}{true}{}
+		\Param{aio}{true}{}
+		\Param{vio}{true}{}
+		\Param{cio}{true}{}
+		\Param{uh}{true}{}
+		\Param{ea}{true}{}
+		\Param{ou}{true}{}
+		\Param{rt}{true}{}
+		\Param{ur}{true}{}
+		\Param{aa}{true}{}
+		\Param{av}{true}{}
+		\Param{rv}{true}{}
+		\Param{ca}{true}{}
+		\Param{pra}{true}{}
+		\Param{paa}{true}{}
+		\Param{pva}{true}{}
+		\Param{pca}{true}{}
+		\Param{pcxa}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd2}{false}{$rio \subseteq{} ROLE \cprod{} ORG$}{true}{}
+		\Guard{grd4}{false}{$aio \in{} \pow{}(ACTIVITY \cprod{} ORG)$}{true}{}
+		\Guard{grd5}{false}{$vio \subseteq{} VIEW \cprod{} ORG$}{true}{}
+		\Guard{grd6}{false}{$cio \subseteq{} CONTEXT \cprod{} ORG$}{true}{}
+		\Guard{grd7}{false}{$uh \in{} UNIT \pfun{} UNIT$}{true}{}
+		\Guard{grd8}{false}{$ea \subseteq{} EMPLOYEE \cprod{} UNIT$}{true}{}
+		\Guard{grd9}{false}{$ou \in{} UNIT \pfun{} ORG $}{true}{}
+		\Guard{grd10}{false}{$cio \subseteq{} CONTEXT \cprod{} ORG$}{true}{}
+		\Guard{grd11}{false}{$rt \in{} ORG \pfun{} UNIT$}{true}{}
+		\Guard{grd12}{false}{$ur \subseteq{} UNIT \cprod{} rio$}{true}{}
+		\Guard{grd13}{false}{$av \subseteq{} ACTION \cprod{} vio$}{true}{}
+		\Guard{grd14}{false}{$aa \subseteq{} ACTION \cprod{} aio$}{true}{}
+		\Guard{grd15}{false}{$rv \subseteq{} RESOURCE \cprod{} vio$}{true}{}
+		\Guard{grd16}{false}{$ca \subseteq{} COR \cprod{} UNIT \cprod{} POSITION \cprod{} DEADLINE$}{true}{}
+		\Guard{grd17}{false}{$pra \in{} PERMISSION \pfun{} rio$}{true}{}
+		\Guard{grd18}{false}{$paa \in{} PERMISSION \pfun{} aio$}{true}{}
+		\Guard{grd19}{false}{$pva \in{} PERMISSION \pfun{} vio$}{true}{}
+		\Guard{grd20}{false}{$pcxa \in{} PERMISSION \pfun{} cio$}{true}{}
+		\Guard{grd21}{false}{$pca \in{} PERMISSION \pfun{} COR$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$CiO \bcmeq{} cio$}{true}{}
+		\Action{act2}{$root \bcmeq{} rt$}{true}{}
+		\Action{act3}{$OU \bcmeq{} ou$}{true}{}
+		\Action{act4}{$AiO \bcmeq{} aio$}{true}{}
+		\Action{act5}{$UH \bcmeq{} uh$}{true}{}
+		\Action{act6}{$ViO \bcmeq{} vio$}{true}{}
+		\Action{act7}{$RiO \bcmeq{} rio$}{true}{}
+		\Action{act8}{$CA \bcmeq{} ca $}{true}{}
+		\Action{act9}{$PCA \bcmeq{} pca$}{true}{}
+		\Action{act10}{$PRA \bcmeq{} pra$}{true}{}
+		\Action{act11}{$EA \bcmeq{} ea$}{true}{}
+		\Action{act12}{$UR \bcmeq{} ur$}{true}{}
+		\Action{act13}{$PAA \bcmeq{} paa$}{true}{}
+		\Action{act14}{$PVA \bcmeq{} pva$}{true}{}
+		\Action{act15}{$PCxA \bcmeq{} pcxa$}{true}{}
+		\Action{act16}{$AV \bcmeq{} av$}{true}{}
+		\Action{act17}{$AA \bcmeq{} aa$}{true}{}
+		\Action{act18}{$RV \bcmeq{} rv$}{true}{}
+	}
+}
+}
+\END
+\end{document}

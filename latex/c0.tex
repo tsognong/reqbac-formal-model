@@ -1,0 +1,39 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{c0}
+\CONTEXT{c0}{}{}
+\SETS{
+	\Set{UNIT}{}
+	\Set{ORG}{}
+	\Set{ROLE}{}
+	\Set{EMPLOYEE}{}
+	\Set{CONTEXT}{}
+	\Set{VIEW}{}
+	\Set{ACTIVITY}{}
+	\Set{RESOURCE}{}
+	\Set{ACTION}{}
+	\Set{PERMISSION}{}
+	\Set{COR}{}
+}
+\CONSTANTS{
+	\Constant{GLOBAL\_DEADLINE}{}
+	\Constant{APPROVER}{}
+	\Constant{POSITION}{}
+	\Constant{DEADLINE}{}
+	\Constant{isTrue}{}
+}
+\AXIOMS{
+	\Axiom{axm1}{false}{$finite(UNIT) \land{} finite(ORG) \land{} finite(ROLE) \land{} finite(EMPLOYEE) \land{} finite(CONTEXT)$}{}
+	\Axiom{axm2}{false}{$finite(PERMISSION)$}{}
+	\Axiom{axm3}{false}{$finite(ACTIVITY) \land{} finite(ACTION) \land{} finite(VIEW) \land{} finite(RESOURCE)$}{}
+	\Axiom{axm4}{false}{$finite(COR)$}{}
+	\Axiom{axm5}{false}{$GLOBAL\_DEADLINE \in{} \natn{}$}{}
+	\Axiom{axm7}{false}{$POSITION = 1\upto{}100$}{}
+	\Axiom{axm8}{false}{$DEADLINE = \nat{}$}{}
+	\Axiom{axm6}{false}{$APPROVER = UNIT \cprod{} POSITION \cprod{} DEADLINE$}{}
+	\Axiom{axm9}{false}{$isTrue \in{} CONTEXT \tfun{} 0\upto{}1$}{}
+	\Axiom{axm10}{false}{$card(CONTEXT) =1000$}{}
+}
+\END
+\end{document}

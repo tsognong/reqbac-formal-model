@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Define chain of command and create security rules" org.eventb.core.configuration="org.eventb.core.fwd;ch.ethz.eventb.qualprob.qpConfig" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m3"/>
+    <org.eventb.core.seesContext name="_tdtnUBy0Ee61L_Ef0FP_Qw" org.eventb.core.target="c0"/>
+    <org.eventb.core.variable name="_tdwqoRy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="CA"/>
+    <org.eventb.core.variable name="_tdwqohy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="PCA"/>
+    <org.eventb.core.variable name="_tdwqoxy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="root"/>
+    <org.eventb.core.variable name="_tdwqpBy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="OU"/>
+    <org.eventb.core.variable name="_tdxRsBy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="RiO"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_R*" org.eventb.core.identifier="UH"/>
+    <org.eventb.core.variable name="_tdxRsRy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="PRA"/>
+    <org.eventb.core.variable name="_tdxRshy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="EA"/>
+    <org.eventb.core.variable name="_tdxRtBy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="ViO"/>
+    <org.eventb.core.variable name="_tdx4wBy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="AiO"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_R7" org.eventb.core.identifier="UR"/>
+    <org.eventb.core.variable name="_tdx4wRy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="PAA"/>
+    <org.eventb.core.variable name="_tdx4why0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="PVA"/>
+    <org.eventb.core.variable name="_tdx4wxy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="CiO"/>
+    <org.eventb.core.variable name="_tdx4xBy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="PCxA"/>
+    <org.eventb.core.variable name="_tdyf0By0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="RV"/>
+    <org.eventb.core.variable name="_tdyf0Ry0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="AV"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_Qw" org.eventb.core.identifier="AA"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_Q{" org.eventb.core.identifier="root1"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_R(" org.eventb.core.identifier="UH1"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_R." org.eventb.core.identifier="OU1"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_R5" org.eventb.core.identifier="UR1"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_R9" org.eventb.core.identifier="RiO1"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_RC" org.eventb.core.identifier="EA1"/>
+    <org.eventb.core.event name="_tdyf0hy0Ee61L_Ef0FP_RD" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="CA1 ≔ ∅" org.eventb.core.label="act27"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="PRA1 ≔ ∅" org.eventb.core.label="act28"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="PAA1 ≔ ∅" org.eventb.core.label="act29"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="PVA1 ≔ ∅" org.eventb.core.label="act30"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="PCA1 ≔ ∅" org.eventb.core.label="act31"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="PCxA1 ≔ ∅" org.eventb.core.label="act32"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_tdyf0hy0Ee61L_Ef0FP_RE" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Abstract_Model_Generation">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Abstract_Model_Generation"/>
+        <org.eventb.core.action name="_td1jIBy0Ee61L_Ef0FP_Qw" org.eventb.core.assignment="CiO ≔ cio" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="__StoEBy2Ee61L_Ef0FP_Qw" org.eventb.core.assignment="AiO ≔ aio" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="_D2pGQBy3Ee61L_Ef0FP_Qw" org.eventb.core.assignment="ViO ≔ vio" org.eventb.core.generated="false" org.eventb.core.label="act6"/>
+        <org.eventb.core.parameter name="_td1jIhy0Ee61L_Ef0FP_R." org.eventb.core.identifier="aio"/>
+        <org.eventb.core.guard name="_td1jIhy0Ee61L_Ef0FP_R/" org.eventb.core.label="grd4" org.eventb.core.predicate="aio ∈ ℙ(ACTIVITY × ORG)"/>
+        <org.eventb.core.guard name="_td1jIhy0Ee61L_Ef0FP_R2" org.eventb.core.label="grd5" org.eventb.core.predicate="vio ⊆ VIEW × ORG"/>
+        <org.eventb.core.parameter name="_td1jIhy0Ee61L_Ef0FP_R3" org.eventb.core.identifier="vio"/>
+        <org.eventb.core.guard name="_td1jIhy0Ee61L_Ef0FP_R6" org.eventb.core.label="grd6" org.eventb.core.predicate="cio ⊆ CONTEXT × ORG"/>
+        <org.eventb.core.parameter name="_td1jIhy0Ee61L_Ef0FP_R7" org.eventb.core.identifier="cio"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_R9" org.eventb.core.assignment="AV ≔ av" org.eventb.core.label="act16"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_R:" org.eventb.core.assignment="AA ≔ aa" org.eventb.core.label="act17"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_R;" org.eventb.core.assignment="RV ≔ rv" org.eventb.core.label="act18"/>
+        <org.eventb.core.guard name="_td1jIhy0Ee61L_Ef0FP_RI" org.eventb.core.label="grd13" org.eventb.core.predicate="av ⊆ ACTION × vio"/>
+        <org.eventb.core.guard name="_td1jIhy0Ee61L_Ef0FP_RJ" org.eventb.core.label="grd14" org.eventb.core.predicate="aa ⊆ ACTION × aio"/>
+        <org.eventb.core.guard name="_td1jIhy0Ee61L_Ef0FP_RK" org.eventb.core.label="grd15" org.eventb.core.predicate="rv ⊆ RESOURCE × vio"/>
+        <org.eventb.core.parameter name="_td1jIhy0Ee61L_Ef0FP_RL" org.eventb.core.identifier="aa"/>
+        <org.eventb.core.parameter name="_td1jIhy0Ee61L_Ef0FP_RM" org.eventb.core.identifier="av"/>
+        <org.eventb.core.parameter name="_td1jIhy0Ee61L_Ef0FP_RN" org.eventb.core.identifier="rv"/>
+        <org.eventb.core.action name="_td1jIRy0Ee61L_Ef0FP_Qw" org.eventb.core.assignment="root ≔ root1" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="_BFqMYBy3Ee61L_Ef0FP_Qw" org.eventb.core.assignment="UH ≔ UH1" org.eventb.core.generated="false" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_Qw" org.eventb.core.assignment="OU ≔ OU1" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="_aKm3kBy3Ee61L_Ef0FP_Qw" org.eventb.core.assignment="RiO ≔ RiO1" org.eventb.core.generated="false" org.eventb.core.label="act7"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_R," org.eventb.core.assignment="UR ≔ UR1" org.eventb.core.label="act12"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_R+" org.eventb.core.assignment="EA ≔ EA1" org.eventb.core.label="act11"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_Q~" org.eventb.core.assignment="PCA ≔ PCA1" org.eventb.core.label="act9"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_R'" org.eventb.core.assignment="PRA ≔ PRA1" org.eventb.core.label="act10"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_R-" org.eventb.core.assignment="PAA ≔ PAA1" org.eventb.core.label="act13"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_R1" org.eventb.core.assignment="PVA ≔ PVA1" org.eventb.core.label="act14"/>
+        <org.eventb.core.action name="_td1jIhy0Ee61L_Ef0FP_R5" org.eventb.core.assignment="PCxA ≔ PCxA1" org.eventb.core.label="act15"/>
+        <org.eventb.core.action name="_PSi28By5Ee61L_Ef0FP_Qw" org.eventb.core.assignment="CA ≔ CA1" org.eventb.core.generated="false" org.eventb.core.label="act19"/>
+        <org.eventb.core.witness name="(" org.eventb.core.label="ca" org.eventb.core.predicate="ca = CA1"/>
+        <org.eventb.core.witness name="_td1jIhy0Ee61L_Ef0FP_R[" org.eventb.core.label="pra" org.eventb.core.predicate="pra = PRA1"/>
+        <org.eventb.core.witness name="_td1jIhy0Ee61L_Ef0FP_R\" org.eventb.core.label="paa" org.eventb.core.predicate="paa = PAA1"/>
+        <org.eventb.core.witness name="_td1jIhy0Ee61L_Ef0FP_R]" org.eventb.core.label="pva" org.eventb.core.predicate="pva = PVA1"/>
+        <org.eventb.core.witness name="_td1jIhy0Ee61L_Ef0FP_R^" org.eventb.core.label="pca" org.eventb.core.predicate="pca = PCA1"/>
+        <org.eventb.core.witness name="_td1jIhy0Ee61L_Ef0FP_R_" org.eventb.core.label="pcxa" org.eventb.core.predicate="pcxa = PCxA1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_tdyf0hy0Ee61L_Ef0FP_RF" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Assign_Oragnization_Root">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Assign_Oragnization_Root"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_tdyf0hy0Ee61L_Ef0FP_RG" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Add_Unit_Hierarchy">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Add_Unit_Hierarchy"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_tdyf0hy0Ee61L_Ef0FP_RH" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Assign_Unit_to_Org">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Assign_Unit_to_Org"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_tdyf0hy0Ee61L_Ef0FP_RI" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Assign_Role_to_Unit">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Assign_Role_to_Unit"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_tdyf0hy0Ee61L_Ef0FP_RJ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Assign_Role_to_Organization">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Assign_Role_to_Organization"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_tdyf0hy0Ee61L_Ef0FP_RK" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Assign_Employee−to_Unit">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Assign_Employee−to_Unit"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_tdyf0hy0Ee61L_Ef0FP_RL" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Assign_Approver">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="p"/>
+        <org.eventb.core.parameter name="-" org.eventb.core.identifier="d"/>
+        <org.eventb.core.parameter name="." org.eventb.core.identifier="u"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="cor"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="cor ↦ u ↦ p ↦ d ∉ CA1"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="CA1 ≔ CA1 ∪ {cor↦u↦p↦d}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="∀ u1, p1, d1 · cor↦u1↦p1↦d1 ∈ CA1 ⇒ u1 ≠ u ∧ (u1↦u ∈ UH1 ∨ (∃u2, p2, d2 · cor↦u2↦p2↦d2 ∈ CA1 ∧ u2↦u ∈ UH1)) "/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="u↦p↦d ∈ APPROVER"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="∀u2, p2, d2· cor↦u2↦p2↦d2 ∈ CA1 ∧ u≠u2 ⇒ (OU1[{u}] ≠ ∅ ∧ OU1[{u2}] ≠ ∅ ⇒ OU1(u) = OU1(u2))"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_RM" org.eventb.core.identifier="CA1"/>
+    <org.eventb.core.invariant name="_tdyf0hy0Ee61L_Ef0FP_RN" org.eventb.core.label="inv1" org.eventb.core.predicate="CA1 ⊆ COR×UNIT × POSITION × DEADLINE"/>
+    <org.eventb.core.invariant name="_tdyf0hy0Ee61L_Ef0FP_RV" org.eventb.core.label="inv3" org.eventb.core.predicate="PRA1 ∈ PERMISSION ⇸ RiO1"/>
+    <org.eventb.core.invariant name="_tdyf0hy0Ee61L_Ef0FP_RW" org.eventb.core.label="inv4" org.eventb.core.predicate="PAA1 ∈ PERMISSION ⇸ AiO"/>
+    <org.eventb.core.invariant name="_tdyf0hy0Ee61L_Ef0FP_RX" org.eventb.core.label="inv5" org.eventb.core.predicate="PVA1 ∈ PERMISSION ⇸ ViO"/>
+    <org.eventb.core.invariant name="_tdyf0hy0Ee61L_Ef0FP_RY" org.eventb.core.label="inv6" org.eventb.core.predicate="PCA1 ∈ PERMISSION ⇸ COR"/>
+    <org.eventb.core.invariant name="_tdyf0hy0Ee61L_Ef0FP_RZ" org.eventb.core.label="inv7" org.eventb.core.predicate="PCxA1 ∈ PERMISSION ⇸ CiO"/>
+    <org.eventb.core.invariant name="_tdyf0hy0Ee61L_Ef0FP_RO" org.eventb.core.comment="organization conservation" org.eventb.core.label="inv2" org.eventb.core.predicate="∀cor, u1, p1, d1, u2, p2, d2· cor↦u1↦p1↦d1 ∈ CA1 ∧ cor↦u2↦p2↦d2 ∈ CA1 ∧ u1 ≠ u2 ⇒ (OU1[{u1}] ≠ ∅ ∧ OU1[{u2}] ≠∅ ⇒ OU1(u1) = OU1(u2))"/>
+    <org.eventb.core.event name="_tdyf0hy0Ee61L_Ef0FP_RP" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Define_Security_Rule">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="rio"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="aio"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="vio"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.identifier="cor"/>
+        <org.eventb.core.parameter name="-" org.eventb.core.identifier="cio"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.identifier="perm"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd1" org.eventb.core.predicate="rio ∈ RiO1 ∧ aio ∈ AiO ∧ vio ∈ ViO ∧ cio ∈ CiO ∧ cor ∈ COR ∧ perm ∈ PERMISSION"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="PRA1 ≔ PRA1 ∪ {perm ↦ rio}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="PAA1 ≔ PAA1 ∪ {perm ↦ aio} " org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="PVA1 ≔ PVA1 ∪ {perm ↦ vio}" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="PCA1 ≔ PCA1 ∪ {perm ↦ cor}" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="PCxA1 ≔ PCxA1 ∪ {perm ↦ cio}" org.eventb.core.label="act5"/>
+        <org.eventb.core.guard name="3" org.eventb.core.label="grd2" org.eventb.core.predicate="∀ a, v, c, org1, org2, org3 · aio = a ↦org1 ∧ vio = v↦org2 ∧ cio = c ↦org3 ⇒ org1 = org2 ∧ org2 = org3"/>
+        <org.eventb.core.guard name="4" org.eventb.core.label="grd3" org.eventb.core.predicate="perm ∉ dom(PRA1) ∧ perm ∉ dom(PAA1) ∧ perm∉dom(PVA1) ∧ perm∉dom(PCA1) ∧ perm ∉ dom(PCxA1)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_RQ" org.eventb.core.identifier="PRA1"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_RR" org.eventb.core.identifier="PAA1"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_RS" org.eventb.core.identifier="PVA1"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_RT" org.eventb.core.identifier="PCA1"/>
+    <org.eventb.core.variable name="_tdyf0hy0Ee61L_Ef0FP_RU" org.eventb.core.identifier="PCxA1"/>
+</org.eventb.core.machineFile>
